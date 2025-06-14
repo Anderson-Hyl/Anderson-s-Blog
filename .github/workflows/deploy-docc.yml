@@ -43,6 +43,9 @@ jobs:
             --output-path ./docs \
             --hosting-base-path Anderson-s-Blog
 
+      - name: Disable Jekyll
+        run: touch ./docs/.nojekyll
+
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
