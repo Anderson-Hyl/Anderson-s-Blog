@@ -43,9 +43,9 @@ jobs:
             --output-path ./docs \
             --hosting-base-path Anderson-s-Blog
 
-      - name: Copy documentation homepage to root index.html
+      - name: Create redirecting index.html to actual DocC content
         run: |
-          cp ./docs/documentation/anderson_s_blog/index.html ./docs/index.html
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=./documentation/anderson_s_blog/index.html" /><title>Redirecting...</title></head><body><p>Redirecting to documentation...</p></body></html>' > ./docs/index.html
 
       - name: Disable Jekyll
         run: touch ./docs/.nojekyll
