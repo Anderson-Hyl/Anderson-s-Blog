@@ -24,7 +24,7 @@ jobs:
       - name: Setup Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '16.2.0'  # 你可以替换为你本地支持的版本
+          xcode-version: '16.2.0'  # 确保与你本地环境匹配
 
       - name: Build DocC Archive
         run: |
@@ -43,6 +43,10 @@ jobs:
             --output-path ./docs \
             --hosting-base-path Anderson-s-Blog
 
+      - name: Copy documentation homepage to root index.html
+        run: |
+          cp ./docs/documentation/anderson_s_blog/index.html ./docs/index.html
+
       - name: Disable Jekyll
         run: touch ./docs/.nojekyll
 
@@ -50,10 +54,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs
-
-      - name: Copy documentation homepage to root index.html
-        run: |
-            cp ./docs/documentation/anderson_s_blog/index.html ./docs/index.html
 
       - name: Deploy to GitHub Pages
         id: deployment
