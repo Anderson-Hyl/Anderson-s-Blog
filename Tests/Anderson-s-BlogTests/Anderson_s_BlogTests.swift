@@ -1,6 +1,9 @@
 import Testing
+import SwiftUI
+import SnapshotTesting
 @testable import Anderson_s_Blog
 
-@Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+@MainActor
+@Test func textStyling() async throws {
+	
 }
