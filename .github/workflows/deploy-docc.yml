@@ -50,7 +50,7 @@ jobs:
 
       - name: Copy documentation homepage to root index.html
         run: |
-            cp ./docs/documentation/anderson-s-blog/index.html ./docs/index.html
+            cp ./docs/documentation/anderson_s_blog/index.html ./docs/index.html
 
       - name: Deploy to GitHub Pages
         id: deployment
