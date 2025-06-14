@@ -31,7 +31,10 @@ let package = Package(
             name: "Anderson-s-BlogTests",
 						dependencies: [
 							"Anderson-s-Blog",
-							.product(name: "SnapshotTesting", package: "swift-snapshot-testing")
+							.product(
+								name: "SnapshotTesting",
+								package: "swift-snapshot-testing"
+							)
 						]
         ),
     ]
