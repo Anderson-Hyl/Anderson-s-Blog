@@ -42,7 +42,10 @@ jobs:
           $(xcrun --find docc) process-archive transform-for-static-hosting "$DOCC_ARCHIVE_PATH" \
             --output-path ./docs \
             --hosting-base-path Anderson-s-Blog \
-            --index documentation/anderson_s_blog
+
+      - name: Copy documentation homepage to root index.html
+        run: |
+          cp ./docs/documentation/andersonsblog/index.html ./docs/index.html
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
