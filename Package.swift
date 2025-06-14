@@ -36,6 +36,6 @@ let package = Package(
 								package: "swift-snapshot-testing"
 							)
 						]
-        ),
+        )
     ]
 )
