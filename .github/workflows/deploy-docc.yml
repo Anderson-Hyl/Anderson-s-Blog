@@ -29,7 +29,7 @@ jobs:
       - name: Build DocC Archive
         run: |
           xcodebuild docbuild \
-            -scheme Anderson's Blog \
+            -scheme Anderson-s-Blog \
             -destination 'platform=macOS' \
             -derivedDataPath ./.derivedData
 
