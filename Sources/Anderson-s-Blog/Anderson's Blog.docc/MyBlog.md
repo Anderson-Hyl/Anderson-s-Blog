@@ -12,4 +12,5 @@ I am an iOS/macOS developer. Code with Swift and Haskell is my favorite!
 @Links(visualStyle: detailedGrid) {
 	- <doc:Build-blog-with-docc>
 	- <doc:SwiftUI-TextStyling>
+    - <doc:How-to-use-DocC>
 }
